@@ -8,3 +8,9 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 
 String greet({required String name}) =>
     RustLib.instance.api.crateApiSimpleGreet(name: name);
+
+int add({required int a, required int b}) =>
+    RustLib.instance.api.crateApiSimpleAdd(a: a, b: b);
+
+Future<String> complexCalculation({required String input}) =>
+    RustLib.instance.api.crateApiSimpleComplexCalculation(input: input);
